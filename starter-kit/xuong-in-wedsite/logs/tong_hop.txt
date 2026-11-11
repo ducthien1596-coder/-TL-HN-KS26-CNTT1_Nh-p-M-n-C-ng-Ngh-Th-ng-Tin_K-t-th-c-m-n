@@ -1,0 +1,22 @@
+"=== BAO CAO SU CO WEDBISE ===" > HOANTHIEN
+
+
+ select-string "status=404" order.log
+order.log:3:2026-06-28 08:08:39 GET /mau-tet-cu status=404
+order.log:6:2026-06-28 08:19:12 GET /images/poster-2.jpg status=404
+order.log:7:2026-06-28 08:23:23 GET /images/poster-2.jpg status=404
+order.log:18:2026-06-28 08:54:24 GET /tin-tuc status=404
+ 
+
+
+
+
+
+
+ select-string -pattern "status=500" ./logs/order.log
+logs\order.log:5:2026-06-28 08:15:01 POST /api/thanh-toan status=500
+logs\order.log:11:2026-06-28 08:34:07 POST /api/tai-file status=500
+logs\order.log:12:2026-06-28 08:37:18 POST /api/dat-in status=500
+logs\order.log:14:2026-06-28 08:43:40 POST /api/thanh-toan status=500
+logs\order.log:16:2026-06-28 08:49:02 POST /api/thanh-toan status=500
+logs\order.log:17:2026-06-28 08:52:13 POST /api/thanh-toan status=500
